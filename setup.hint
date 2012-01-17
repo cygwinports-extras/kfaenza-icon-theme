@@ -1,0 +1,4 @@
+category: KDE
+requires: faenza-icon-theme hicolor-icon-theme oxygen-icons
+sdesc: "Faenza icon theme for KDE"
+ldesc: "Faenza icon theme for KDE"

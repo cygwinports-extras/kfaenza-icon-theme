@@ -1,0 +1,23 @@
+
+HOMEPAGE="http://kde-look.org/content/show.php?content=143890"
+SRC_URI="http://ompldr.org/vYjR0NQ/${P}.tar.gz"
+SRC_DIR="KFaenza"
+
+src_compile() { :; }
+
+src_install() {
+	local dir=/usr/share/icons/KFaenza
+
+	cd ${S}
+	dodir ${dir}
+	cp -r [a-z]* ${D}${dir}
+
+#	dosym fedora.svg ${dir}/places/scalable/distributor-logo.svg
+	dosym start-here-kde.svg ${dir}/places/scalable/start-here.svg
+
+	for size in 256 128 64 48 32 22 16
+	do
+#		dosym fedora.png ${dir}/places/${size}/distributor-logo.png
+		dosym start-here-kde.png ${dir}/places/${size}/start-here.png
+	done
+}
